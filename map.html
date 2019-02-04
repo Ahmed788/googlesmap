@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="utf-8">
+       <title>
+          كيفية استخدام خرائط جوجل في مواقع الويب
+       </title>
+    </head>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script>
+  function initialize() {
+    var mapProp = {
+      center:new google.maps.LatLng(12.81222,45.02917),
+      zoom:6,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("gMap"),mapProp);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <style type="text/css">
+          body{
+           background:#000;
+           color: #bbb;
+          }
+          #gMap{
+           width:700px;
+           height:450px;
+           background: #eef1f2;
+           color:#000;
+           margin-right: auto;
+           margin-top: 30px;
+           margin-left: auto; 
+           border:1px solid #fff;
+           outline: 1px solid #999;
+          }
+  </style>
+<body>
+  <div id="gMap"></div>
+</body>
+</html>
